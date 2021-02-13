@@ -30,6 +30,8 @@ Remove the 4 rubber feet to access screws and disassemble the device. Take out t
 
 Download [tasmota-zbbridge](https://github.com/arendst/Tasmota/blob/firmware/firmware/tasmota/tasmota-zbbridge.bin?raw=true), a unique binary built specifically for ZBBridge and flash it using your favorite flashing software.
 
+For use with `esptool` and a esplink I used RST (which seems to be a rerverted DTR) on E_RST. Z_RST had to be tied to GND, since the zigbee device seems to interfere with the flash traffic.
+
 When the ZbBridge is flashed with Tasmota, **disconnect all breadboard wires** and power the board using its USB port with a 5V 1A power supply. Configure Wi-Fi [over Tasmota AP](https://tasmota.github.io/docs/Getting-Started/#using-web-ui) (you cannot configure the device over serial with this binary). After it is connected to your network access the webUI again. 
 
 ## Flash Zigbee module
